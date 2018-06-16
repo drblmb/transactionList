@@ -1,21 +1,8 @@
-##Check Client
-* Start freshly cloned application:
+# transactionList
 
 ```
 npm install
 npm start
-```
-
-* Run with store logger enabled:
-
-```
-REACT_APP_DEV=true npm start
-```
-
-* Build for Production:
-
-```
-npm build
 ```
 
 * Run tests:
@@ -24,31 +11,10 @@ npm build
 npm test
 ```
 
-* Run ESLint:
-
-```
-npm run lint
-```
-
-###Environment Variables
-
-* `REACT_APP_REMOTE_URL: url string`
-
-    Check server API url. Default: https://check-api-dev.silvervue.com.
-
-* `REACT_APP_BUILD_NUMBER: string`
-    
-    Build number. Default: undefined.
-
-* `REACT_APP_DEV: bool`
-    
-    Enables logging. Default: undefined.
-
-###Tips
-* Application uses `react-scripts` for build and configuration. Detailed User Guide is [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-* Test files are to be `<name>.test.js`.
-* React-Router `Link` component is a router-aware anchor, if you need to link to an external site use an `<a>`.
-
-###References
-* [React Router API](https://reacttraining.com/react-router/web/guides/quick-start)
-# transactionList
+# Notes
+* I went for a basic UI design since there were no specific requirements
+* Most of the time, I prefer formatting to be done in the UI component, but I did it in the reducer because I would expect a server to format amounts and dates correctly
+* Dealing with the dates was a bit tricky because they were not in a valid format
+* The filter is going to apply to the displayed data, not the source data.
+* Unit tests all run
+* Added the display:none div as a trick to get the app to re-render when filter changed because the transaction list isn't actually changing

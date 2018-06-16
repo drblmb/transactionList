@@ -1,0 +1,55 @@
+{
+  "name": "transactions",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "js-cookie": "^2.2.0",
+    "lodash": "^4.17.4",
+    "minilog": "^3.1.0",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
+    "query-string": "^5.0.1",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.4.0",
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^22.0.4",
+    "react-scripts": "^1.1.4",
+    "react-test-renderer": "^16.2.0"
+  },
+  "scripts": {
+    "start": "NODE_PATH=src react-scripts start",
+    "build": "NODE_PATH=src react-scripts build",
+    "test": "NODE_PATH=src react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "test-no-watch": " CI=true npm test"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/src/reducers/**",
+      "**/src/lib/**",
+      "**/src/constants/**",
+      "**/src/actions/**",
+      "**/src/api/**",
+      "!**/__snapshots__/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 75,
+        "branches": 68,
+        "functions": 80
+      }
+    }
+  }
+}
